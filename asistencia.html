@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Asistencia</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300&family=Roboto+Condensed:ital,wght@1,700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./CSS/asistencia.css" />
+    <script src="./JS/asistencia.js"></script>
+  </head>
+  <body>
+    <section class="container-form">
+      <form class="container__asistentes" action="">
+        <div class="invitado">
+          <label for="name">
+            <input
+              type="text"
+              name="nombre"
+              id="nombre"
+              autocomplete="nombre"
+              placeholder="Nombre del invitado"
+              required
+            />
+            <img
+              id="icon-add__inv"
+              src="./Assets/Icons/add_FILL0_wght400_GRAD0_opsz48.png"
+              alt=""
+            />
+          </label>
+        </div>
+        <div id="acompa1" class="oculto">
+          <label for="acompa1">
+            <input
+              type="text"
+              name="acompa1"
+              id="acompa1"
+              autocomplete="name"
+              placeholder="Nombre del acompañante"
+            />
+          </label>
+          <img
+            id="icon-add__acom1"
+            src="./Assets/Icons/add_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+          />
+          <img
+            id="icon-rem__acom1"
+            src="./Assets/Icons/remove_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+          />
+        </div>
+        <div id="acompa2" class="oculto">
+          <label for="acompa2">
+            <input
+              type="text"
+              name="acompa2"
+              id="acompa2"
+              autocomplete="nombre"
+              placeholder="Nombre del acompañante"
+            />
+          </label>
+          <img
+            id="icon-add__acom2"
+            src="./Assets/Icons/add_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+          />
+          <img
+            id="icon-rem__acom2"
+            src="./Assets/Icons/remove_FILL0_wght400_GRAD0_opsz48.png"
+            alt=""
+          />
+        </div>
+        <div>
+          <input type="submit" />
+        </div>
+      </form>
+    </section>
+  </body>
+</html>
