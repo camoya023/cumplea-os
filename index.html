@@ -1,50 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Cumpleaños</title>
-    <link rel="preconnect" href="https://fonts.googleapis.com" />
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-    <link
-      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&family=Poppins:wght@300&family=Roboto+Condensed:ital,wght@1,700&display=swap"
-      rel="stylesheet"
-    />
-    <link rel="stylesheet" href="./CSS/style.css" />
-  </head>
-  <body>
-    <header>
-      <img src="./Assets/Images/Header.png" alt="" />
-    </header>
-    <section class="marco">
-      <div>
-        <img src="./Assets/Images/Marco.png" alt="marco" />
-        <img class="foto" src="./Assets/Images/Foto.png" alt="" />
-        <div>
-          <p>
-            Te gustan los dinosaurios tanto como a Juan Esteban? Entonces tienes
-            que venir a su cumpleaños! Será una fiesta llena de diversión y
-            aventuras prehistoricas.
-          </p>
-        </div>
-      </div>
-    </section>
-    <section class="fecha">
-      <img src="./Assets/Images/calendario.png" alt="" />
-      <span>3:00 p.m</span>
-    </section>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Formato de Pago de Administración</title>
+</head>
+<body>
+    <h1>Formato de Pago de Administración</h1>
+    <form id="payment-form">
+        <label for="apartamento">Apartamento:</label>
+        <input type="number" id="apartamento" placeholder="Ingrese el apartamento">
 
-    <footer>
-      <div>
-        <img src=".//Assets/Images/Ubicacion.png" alt="" />
-      </div>
-      <div class="direccion">
-        <p>AV. 6AN No. 22N-54 Promedico terraza</p>
-      </div>
-      <div>
-        <button class="buttonca">Confirmar Asistencia</button>
-      </div>
-    </footer>
-  </body>
+        <label for="torre">Torre:</label>
+        <input type="text" id="torre" placeholder="Ingrese la torre">
+
+				<label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" placeholder="Ingrese su nombre">
+
+				<label for="telefono">Telefono:</label>
+        <input type="number" id="telefono" placeholder="Ingrese su Telefono">
+
+				<label for="valor">Total a Pagar:</label>
+        <input type="number" id="valor" placeholder="Ingrese Valor a pagar">
+
+        <button type="button" onclick="generarRecibo()">Generar Recibo</button>
+    </form>
+
+    <div id="recibo-container">
+        <canvas id="recibo"></canvas>
+        <a id="descargar" download="recibo.png" style="display: none;">Descargar Recibo</a>
+    </div>
+
+    <script src=".//JS/asistencia.js"></script>
+</body>
 </html>
