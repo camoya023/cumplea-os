@@ -3,27 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href=".//CSS/style.css">
     <title>Formato de Pago de Administración</title>
 </head>
 <body>
     <h1>Formato de Pago de Administración</h1>
-    <form id="payment-form">
-        <label for="apartamento">Apartamento:</label>
-        <input type="number" id="apartamento" placeholder="Ingrese el apartamento">
-
-        <label for="torre">Torre:</label>
-        <input type="text" id="torre" placeholder="Ingrese la torre">
-
-				<label for="nombre">Nombre:</label>
-        <input type="text" id="nombre" placeholder="Ingrese su nombre">
-
-				<label for="telefono">Telefono:</label>
-        <input type="number" id="telefono" placeholder="Ingrese su Telefono">
-
-				<label for="valor">Total a Pagar:</label>
-        <input type="number" id="valor" placeholder="Ingrese Valor a pagar">
-
+    <form id="payment-form" class="grid-form">
+        <div class="form-field">
+            <label for="torre">Torre:</label>
+            <input type="text" id="torre" placeholder="Ingrese la torre">
+        </div>
+        <div class="form-field">
+            <label for="apartamento">Apartamento:</label>
+            <input type="text" id="apartamento" placeholder="Ingrese el apartamento">
+        </div>
+        <div class="form-field">
+            <label for="nombre">Nombre:</label>
+            <input type="text" id="nombre" placeholder="Ingrese su nombre">
+        </div>
+        <div class="form-field">
+            <label for="telefono">Teléfono:</label>
+            <input type="text" id="telefono" placeholder="Ingrese su teléfono">
+        </div>
+        <div class="form-field">
+            <label for="valor-a-pagar">Valor a Pagar:</label>
+            <input type="text" id="valor-a-pagar" placeholder="Ingrese el valor a pagar">
+        </div>
         <button type="button" onclick="generarRecibo()">Generar Recibo</button>
     </form>
 

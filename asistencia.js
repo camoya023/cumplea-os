@@ -1,16 +1,12 @@
 function generarRecibo() {
-  const titular = "Conjunto Residencial GRANATE"
-  const cuenta = "116053398"
-  const torreInput = document.getElementById('torre').value;
+  const torre = document.getElementById('torre').value;
   const apartamento = document.getElementById('apartamento').value;
   const nombre = document.getElementById('nombre').value;
   const telefono = document.getElementById('telefono').value;
-  const valor = document.getElementById('valor').value;
-  const total = valor.value;
+  const valorAPagar = document.getElementById('valor-a-pagar').value;
   const canvas = document.getElementById('recibo');
   const ctx = canvas.getContext('2d');
   const image = new Image();
-  const torreValues = { "1A": 11, "1B": 12, "1C": 13, "1D": 14, "2A": 21, "2B": 22, "2C": 23, "2D": 24 };
 
   // Reemplaza 'nombre-de-tu-imagen.png' con la URL de tu imagen base
   image.src = './/Assets/Images/cuenta-recaudo-avvillas.png';
@@ -20,21 +16,16 @@ function generarRecibo() {
       canvas.height = image.height;
       ctx.drawImage(image, 0, 0);
 
-      // Obtén el valor numérico de la torre
-      const torre = torreValues[torreInput] || 0;
-
       // Configura los valores en el canvas
       ctx.font = '16px Arial';
-      ctx.fillStyle = 'red';
-      ctx.fillText(`${titular}`, 40, 115)
-      ctx.fillText(`${cuenta}`, 500, 115)
-      ctx.fillText(`${apartamento}`, 80, 188);
-      ctx.fillText(`${torre}`, 450, 188);
-      ctx.fillText(`${nombre}`, 40, 340);
-      ctx.fillText(`${telefono}`, 250, 340);
-      ctx.fillText(`${valor}`, 600, 333);
-      ctx.fillText(`${valor}`, 600, 355);
-      
+      ctx.fillStyle = 'black';
+      ctx.fillText(`Torre: ${torre}`, 50, 100);
+      ctx.fillText(`Apartamento: ${apartamento}`, 50, 150);
+      ctx.fillText(`Nombre: ${nombre}`, 50, 200);
+      ctx.fillText(`Teléfono: ${telefono}`, 50, 250);
+      ctx.fillText(`Valor a Pagar: $${valorAPagar}`, 50, 300);
+      ctx.fillText(`Número de Cuenta: XXXXXXXXXXXX`, 50, 350); // Reemplaza con el número de cuenta real
+      ctx.fillText(`Titular de la Cuenta: XXXXXXXX`, 50, 400); // Reemplaza con el titular de la cuenta real
 
       // Muestra el botón de descarga
       const descargar = document.getElementById('descargar');
