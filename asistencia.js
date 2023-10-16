@@ -13,7 +13,7 @@ function generarRecibo() {
   const torreValues = { "1A": 11, "1B": 12, "1C": 13, "1D": 14, "2A": 21, "2B": 22, "2C": 23, "2D": 24 };
 
   // Reemplaza 'nombre-de-tu-imagen.png' con la URL de tu imagen base
-  image.src = './/Assets/Images/cuenta-recaudo-avvillas';
+  image.src = './/Assets/Images/cuenta-recaudo-avvillas.png';
 
   image.onload = function () {
       canvas.width = image.width;
