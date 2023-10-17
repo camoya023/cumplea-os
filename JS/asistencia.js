@@ -18,14 +18,15 @@ function generarRecibo() {
 
       // Configura los valores en el canvas
       ctx.font = '16px Arial';
-      ctx.fillStyle = 'black';
-      ctx.fillText(`Torre: ${torre}`, 50, 100);
-      ctx.fillText(`Apartamento: ${apartamento}`, 50, 150);
-      ctx.fillText(`Nombre: ${nombre}`, 50, 200);
-      ctx.fillText(`Teléfono: ${telefono}`, 50, 250);
-      ctx.fillText(`Valor a Pagar: $${valorAPagar}`, 50, 300);
-      ctx.fillText(`Número de Cuenta: XXXXXXXXXXXX`, 50, 350); // Reemplaza con el número de cuenta real
-      ctx.fillText(`Titular de la Cuenta: XXXXXXXX`, 50, 400); // Reemplaza con el titular de la cuenta real
+      ctx.fillStyle = 'red';
+      ctx.fillText(`${torre}`,500, 190);
+      ctx.fillText(`${apartamento}`, 120, 190);
+      ctx.fillText(`${nombre}`, 50, 335);
+      ctx.fillText(`${telefono}`, 300, 335);
+      ctx.fillText(`${valorAPagar}`,600, 332);
+      ctx.fillText(`${valorAPagar}`,600, 354);
+      ctx.fillText(`116053398`, 500, 118); // Reemplaza con el número de cuenta real
+      ctx.fillText(`Conjunto Residencial GRANATE`, 50, 118); // Reemplaza con el titular de la cuenta real
 
       // Muestra el botón de descarga
       const descargar = document.getElementById('descargar');
