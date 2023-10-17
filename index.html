@@ -10,23 +10,34 @@
     <h1>Formato de Pago de Administración</h1>
     <form id="payment-form" class="grid-form">
         <div class="form-field">
-            <label for="torre">Torre:</label>
-            <input type="text" id="torre" placeholder="Ingrese la torre">
-        </div>
-        <div class="form-field">
-            <label for="apartamento">Apartamento:</label>
+            <label for="apartamento">Apartamento</label>
             <input type="text" id="apartamento" placeholder="Ingrese el apartamento">
         </div>
         <div class="form-field">
-            <label for="nombre">Nombre:</label>
+						<label for="torre">Torre</label>
+						<select id="torre">
+							<option value="11">Torre 1A</option>
+							<option value="12">Torre 1B</option>
+							<option value="13">Torre 1C</option>
+							<option value="14">Torre 1D</option>
+							<option value="21">Torre 2A</option>
+							<option value="22">Torre 2B</option>
+							<option value="23">Torre 2C</option>
+							<option value="24">Torre 2D</option>
+
+							<!-- Agrega más opciones según sea necesario -->
+					</select>
+        </div>
+        <div class="form-field">
+            <label for="nombre">Nombre</label>
             <input type="text" id="nombre" placeholder="Ingrese su nombre">
         </div>
         <div class="form-field">
-            <label for="telefono">Teléfono:</label>
+            <label for="telefono">Teléfono</label>
             <input type="text" id="telefono" placeholder="Ingrese su teléfono">
         </div>
         <div class="form-field">
-            <label for="valor-a-pagar">Valor a Pagar:</label>
+            <label for="valor-a-pagar">Valor a Pagar</label>
             <input type="text" id="valor-a-pagar" placeholder="Ingrese el valor a pagar">
         </div>
         <button type="button" onclick="generarRecibo()">Generar Recibo</button>
